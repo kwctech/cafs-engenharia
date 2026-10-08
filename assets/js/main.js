@@ -404,6 +404,33 @@
     );
   }
 
+  function abrirModal(p, box, modal) {
+    box.innerHTML = modalHTML(p);
+    var x = box.querySelector(".modal__close");
+    if (x) x.addEventListener("click", function () { fecharModal(modal); });
+    box.querySelectorAll(".modal__thumbs button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var img = box.querySelector(".modal__media img");
+        if (img) img.src = b.getAttribute("data-src");
+        box.querySelectorAll(".modal__thumbs button").forEach(function (o) { o.classList.remove("is-on"); });
+        b.classList.add("is-on");
+      });
+    });
+    box.querySelectorAll("[data-wa]").forEach(function (el) {
+      el.setAttribute("href", waLink(el.getAttribute("data-wa")));
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener");
+    });
+    if (window.CAFS3D) window.CAFS3D.init(box, p);
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function fecharModal(modal) {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
   function initCatalogo() {
     var grid = document.getElementById("grade");
     var filtros = document.getElementById("filtros");
@@ -455,25 +482,7 @@
       });
     }
 
-    function abrir(p) {
-      box.innerHTML = modalHTML(p);
-      var x = box.querySelector(".modal__close");
-      if (x) x.addEventListener("click", fechar);
-      box.querySelectorAll(".modal__thumbs button").forEach(function (b) {
-        b.addEventListener("click", function () {
-          box.querySelector(".modal__media img").src = b.getAttribute("data-src");
-          box.querySelectorAll(".modal__thumbs button").forEach(function (o) { o.classList.remove("is-on"); });
-          b.classList.add("is-on");
-        });
-      });
-      box.querySelectorAll("[data-wa]").forEach(function (el) {
-        el.setAttribute("href", waLink(el.getAttribute("data-wa")));
-        el.setAttribute("target", "_blank");
-      });
-      if (window.CAFS3D) window.CAFS3D.init(box, p);
-      modal.classList.add("is-open");
-      document.body.style.overflow = "hidden";
-    }
+    function abrir(p) { abrirModal(p, box, modal); }
 
     grid.addEventListener("click", function (e) {
       var card = e.target.closest(".cat");
@@ -483,13 +492,9 @@
       if (p) abrir(p);
     });
 
-    function fechar() {
-      modal.classList.remove("is-open");
-      document.body.style.overflow = "";
-    }
     if (modal) {
-      modal.addEventListener("click", function (e) { if (e.target === modal) fechar(); });
-      document.addEventListener("keydown", function (e) { if (e.key === "Escape") fechar(); });
+      modal.addEventListener("click", function (e) { if (e.target === modal) fecharModal(modal); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") fecharModal(modal); });
     }
 
     // primeiro render
@@ -537,11 +542,34 @@
     });
   }
 
+  /* ---------------- SHEET HOUSE ---------------- */
+  function initSheetHouse() {
+    var grid = document.getElementById("grade");
+    var modal = document.getElementById("modal");
+    var box = document.getElementById("modalBox");
+    if (!grid || typeof PRODUTOS !== "undefined") return; // só roda fora do catálogo principal
+    if (typeof SHEET_HOUSE === "undefined") return;
+
+    grid.addEventListener("click", function (e) {
+      var card = e.target.closest(".cat");
+      if (!card) return;
+      var code = card.getAttribute("data-code");
+      var p = SHEET_HOUSE.filter(function (x) { return x.code === code; })[0];
+      if (p) abrirModal(p, box, modal);
+    });
+
+    if (modal) {
+      modal.addEventListener("click", function (e) { if (e.target === modal) fecharModal(modal); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") fecharModal(modal); });
+    }
+  }
+
   /* ---------------- INICIA ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
     initTema();
     initNav();
     initCatalogo();
+    initSheetHouse();
     initCarousel();
     initReveal();
     initCounters();
