@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato e Orçamento | CAFS Engenharia Mecânica</title>
+<meta name="description" content="Fale com a CAFS Engenharia Mecânica: orçamento de caldeiras, sistemas de incêndio, NR-12, esteiras e estruturas metálicas. Atendimento em todo o Brasil.">
+<meta name="theme-color" content="#12151a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="CAFS Engenharia Mec&acirc;nica &mdash; p&aacute;gina inicial">
+      <img class="brand__name" src="assets/img/logo-nome.svg" alt="CAFS Engenharia Mec&acirc;nica" decoding="async" fetchpriority="high">
+    </a>
+
+    <nav class="menu" id="menu">
+      <a href="index.html">In&iacute;cio</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="servicos.html">Servi&ccedil;os</a>
+      <a href="contato.html">Contato</a>
+      <a class="btn btn--sm btn--gold" href="contato.html#orcamento">Or&ccedil;amento</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--sm btn--gold" href="contato.html#orcamento">Solicitar or&ccedil;amento</a>
+      <button class="themetog" id="themetog" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema"><svg class="ico-lua" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 1 1 9.7 3.5a7 7 0 0 0 10.8 10.8z"/></svg><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 1.8v2.6M12 19.6v2.6M1.8 12h2.6M19.6 12h2.6M4.8 4.8l1.9 1.9M17.3 17.3l1.9 1.9M19.2 4.8l-1.9 1.9M6.7 17.3l-1.9 1.9"/></svg></button>
+      <button class="burger" id="burger" aria-label="Abrir menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="phead">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">In&iacute;cio</a><span>/</span>Contato</p>
+    <h1>Vamos falar<br><span class="hl-sf">de engenharia</span></h1>
+    <p class="lead">Preencha o formul&aacute;rio e o resumo chega direto no WhatsApp do nosso time t&eacute;cnico. Resposta em at&eacute; 24 horas.</p>
+  </div>
+</section>
+
+<section class="sec sec--tight" id="orcamento">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+
+      <!-- FORMULÁRIO -->
+      <div class="reveal">
+        <p class="eyebrow">Solicitar or&ccedil;amento</p>
+        <h2 class="h2" style="margin-bottom:var(--sp-4)">Conte o que voc&ecirc; precisa</h2>
+
+        <form class="form" id="form">
+          <div class="form__row">
+            <div class="field">
+              <label for="nome">Seu nome</label>
+              <input id="nome" name="Nome" type="text" placeholder="Como podemos te chamar?" required>
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="Empresa" type="text" placeholder="Raz&atilde;o social ou nome fantasia">
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input id="telefone" name="Telefone" type="tel" placeholder="(00) 00000-0000">
+            </div>
+            <div class="field">
+              <label for="cidade">Cidade / UF</label>
+              <input id="cidade" name="Cidade" type="text" placeholder="Canoinhas / SC">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="servico">O que voc&ecirc; precisa</label>
+            <select id="servico" name="Servi&ccedil;o">
+              <option>Caldeira / vaso de press&atilde;o</option>
+              <option>Sistema de inc&ecirc;ndio / rede de hidrantes</option>
+              <option>Adequa&ccedil;&atilde;o NR-12 / prote&ccedil;&otilde;o de m&aacute;quina</option>
+              <option>Esteira transportadora</option>
+              <option>Rosca transportadora / v&aacute;lvula rotativa</option>
+              <option>P&oacute;rtico, monovia ou galp&atilde;o</option>
+              <option>Plataforma / estrutura met&aacute;lica</option>
+              <option>Distribui&ccedil;&atilde;o de vapor e condensado</option>
+              <option>Outro (descrever abaixo)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="descricao">Detalhes do seu projeto</label>
+            <textarea id="descricao" name="Descri&ccedil;&atilde;o" placeholder="Dimens&otilde;es, capacidade, material, prazo desejado, fotos que voc&ecirc; j&aacute; tem do ambiente..."></textarea>
+          </div>
+
+          <button class="btn btn--gold btn--block" type="submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            Enviar pelo WhatsApp
+          </button>
+
+          <p class="form__note">Ao enviar, abrimos o WhatsApp com o resumo do seu pedido. Nenhum dado &eacute; armazenado neste site.</p>
+        </form>
+      </div>
+
+      <!-- DADOS -->
+      <div class="reveal d2">
+        <p class="eyebrow">Canais diretos</p>
+        <h2 class="h2" style="margin-bottom:var(--sp-4)">Atendimento</h2>
+
+        <div class="panel" style="margin-bottom:var(--sp-3)">
+          <span class="panel__rivets"><i></i><i></i><i></i><i></i></span>
+          <span class="panel__num">// WHATSAPP</span>
+          <a class="h3" style="display:block;color:var(--gold-300)" data-wa="Olá! Vim pela página de contato da CAFS.">(47) 3622-5207</a>
+          <p style="font-size:14.5px;color:var(--steel-300);margin:8px 0 0">Resposta r&aacute;pida durante o hor&aacute;rio comercial.</p>
+        </div>
+
+        <div class="panel" style="margin-bottom:var(--sp-3)">
+          <span class="panel__rivets"><i></i><i></i><i></i><i></i></span>
+          <span class="panel__num">// TELEFONE</span>
+          <a class="h3" style="display:block" href="tel:+554736280028">(47) 3628-0028</a>
+          <p style="font-size:14.5px;color:var(--steel-300);margin:8px 0 0">Segunda a sexta, das 08h &agrave; 18h.</p>
+        </div>
+
+        <div class="panel" style="margin-bottom:var(--sp-3)">
+          <span class="panel__rivets"><i></i><i></i><i></i><i></i></span>
+          <span class="panel__num">// E-MAIL</span>
+          <a class="h3" style="display:block;color:var(--gold-300)" href="mailto:contato@cafs.eng.br">contato@cafs.eng.br</a>
+          <p style="font-size:14.5px;color:var(--steel-300);margin:8px 0 0">Envie planta, fotos e desenhos t&eacute;cnicos.</p>
+        </div>
+
+        <div class="panel">
+          <span class="panel__rivets"><i></i><i></i><i></i><i></i></span>
+          <span class="panel__num">// ENDERE&ccedil;O</span>
+          <address style="font-style:normal;color:var(--steel-200);font-size:15.5px;line-height:1.8">
+            J&uacute;lio Budant Neto, 200 &ndash; Campo da &Aacute;gua Verde<br>
+            Canoinhas &ndash; SC
+          </address>
+          
+        </div>
+
+        <div class="panel panel--gold" style="margin-top:var(--sp-3)">
+          <span class="panel__rivets"><i></i><i></i><i></i><i></i></span>
+          <span class="panel__num">// REGISTROS</span>
+          <ul class="ticks" style="margin-top:var(--sp-1)">
+            <li>Atendimento em <b>todo o Brasil</b></li>
+            <li>Visita t&eacute;cnica sem custo em <b>Santa Catarina</b></li>
+            <li>Or&ccedil;amento em at&eacute; <b>24 horas</b></li>
+            <li>Nota fiscal e <b>ART</b> em todos os servi&ccedil;os</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--tight">
+  <div class="wrap">
+    <div class="quote reveal">
+      <p>&ldquo;Solicite agora e tenha um atendimento r&aacute;pido e profissional. Nossa equipe est&aacute; pronta para te ajudar.&rdquo;</p>
+      <cite>Equipe t&eacute;cnica CAFS &bull; seg a sex, 08h &agrave; 18h</cite>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <a class="sig" href="index.html" style="margin-bottom:var(--sp-3)"><b>CAFS</b><span>Engenharia Mec&acirc;nica</span></a>
+        <p style="color:var(--steel-300);font-size:15px;max-width:34ch;margin:0">Inova&ccedil;&atilde;o em solu&ccedil;&otilde;es de engenharia mec&acirc;nica para pequenas e m&eacute;dias empresas desde 2018.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/cafsengenharia" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V8c0-1.1.3-1.8 1.9-1.8H17V2.6C16.7 2.6 15.6 2.5 14.3 2.5 11.8 2.5 10 4.1 10 6.9V10H7v4h3v8h3z"/></svg></a>
+          <a href="https://www.instagram.com/cafsengenharia/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.4 2.1C2.7 8.5 2.7 8.9 2.7 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1a3.2 3.2 0 0 0-.8-1.2 3.2 3.2 0 0 0-1.2-.8c-.4-.1-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 9.9 5 5 0 0 1 0-9.9zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm6.4-2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+          <a href="https://www.linkedin.com/company/cafs-engenharia-mec%C3%A2nica-ltda" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Servi&ccedil;os</h4>
+        <ul>
+          <li><a href="servicos.html#caldeiras">Caldeiras e vasos</a></li>
+          <li><a href="servicos.html#incendio">Sistemas de inc&ecirc;ndio</a></li>
+          <li><a href="servicos.html#nr12">Prote&ccedil;&otilde;es e NR-12</a></li>
+          <li><a href="servicos.html#transporte">Esteiras e roscas</a></li>
+          <li><a href="servicos.html#estruturas">P&oacute;rticos e estruturas</a></li>
+          <li><a href="servicos.html#vapor">Vapor e condensado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="produtos.html#grade">Caldeiras</a></li>
+          <li><a href="produtos.html#grade">Rede de hidrantes</a></li>
+          <li><a href="produtos.html#grade">Esteiras</a></li>
+          <li><a href="produtos.html#grade">Plataformas</a></li>
+          <li><a href="produtos.html#grade">Trocadores</a></li>
+          <li><a href="produtos.html#grade">Dutos de ventila&ccedil;&atilde;o</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <address>
+          J&uacute;lio Budant Neto, 200 &ndash; Campo da &Aacute;gua Verde<br>Canoinhas &ndash; SC<br><br>
+          <a href="tel:+554736280028" style="color:var(--gold-300)">(47) 3628-0028</a><br>
+          <a href="mailto:contato@cafs.eng.br" style="color:var(--gold-300)">contato@cafs.eng.br</a>
+        </address>
+      </div>
+    </div>
+    <div class="foot__bar">
+      <span>&copy; <span data-ano>2026</span> CAFS Engenharia Mec&acirc;nica</span>
+      <span>CNPJ 00.000.000/0001-00 &nbsp;|&nbsp; Canoinhas &ndash; SC</span>
+      <span class="foot__dev">Site desenvolvido pela <b>KWC Tech</b></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wafloat" data-wa="Olá! Vim pelo site da CAFS e gostaria de falar com um engenheiro." aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.6-5.5-1.6l-.4-.2-4 1.1 1.1-3.9-.3-.4A10.6 10.6 0 1 1 16 26.6zm6-8c-.3-.2-2-.9-2.3-1-.3-.1-.5-.2-.8.2-.2.3-.9 1-1.1 1.2-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-2.5-1.6A9.4 9.4 0 0 1 12.5 15c-.2-.3 0-.5.1-.6l.6-.7c.2-.2.2-.4.3-.6v-.6l-1-2.4c-.2-.6-.5-.5-.8-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg>
+  <span>Or&ccedil;amento</span>
+</a>
+<button class="totop" aria-label="Voltar ao topo">&#9650;</button>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

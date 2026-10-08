@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 108" width="340" height="108">
+  <title>CAFS - Engenharia Mecanica</title>
+  <!-- CAFS em tom grafite claro -->
+  <text x="0" y="70"
+        font-family="'Arial Black','Arial',sans-serif"
+        font-size="82" font-weight="900"
+        textLength="340" lengthAdjust="spacingAndGlyphs"
+        fill="#b3bcc7">CAFS</text>
+  <!-- filete dourado discreto -->
+  <rect x="0" y="80" width="340" height="4" fill="#c99612"/>
+  <!-- subtitulo ocupando a MESMA largura do CAFS -->
+  <text x="0" y="104"
+        font-family="'Arial Narrow','Arial',sans-serif"
+        font-size="21" font-weight="700"
+        textLength="340" lengthAdjust="spacing"
+        fill="#8e99a6">ENGENHARIA MECANICA</text>
+</svg>
