@@ -542,7 +542,7 @@
     });
   }
 
-  /* ---------------- SHEET HOUSE ---------------- */
+  /* ---------------- ShelterBox ---------------- */
   function initSheetHouse() {
     var grid = document.getElementById("grade");
     var modal = document.getElementById("modal");
